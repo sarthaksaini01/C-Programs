@@ -1,9 +1,10 @@
 #include<stdio.h>
-#include<conio.h>
-void main()
+int main()
 {
-	int a;
-	printf("Enter the number");
-	scanf("%d",&a);
-	getche();
+int a=22,*ptr;
+ptr=&a;
+printf("value of before ptr is %d\n",ptr);
+ptr++;
+printf("value of after ptr is %d",ptr);
+return 0;
 }

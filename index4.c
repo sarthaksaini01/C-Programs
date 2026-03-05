@@ -1,12 +1,17 @@
 #include<stdio.h>
-#include<conio.h>
+void func1(void(*ptr));
+void func2();
 int main()
 {
-	int a,b,c;
-	printf("Enter the two number;&a,&b")
-	scanf("%d %d",&a,&b);
-	c=a+b;
-	printf("sum of %d and %d is %d;a,b");
-	scanf("%d %d %d,a,b,c");
-	getche();
+	func1(func2);
+	return 0;
+}
+void func1(void(*ptr))
+{
+	printf("Function1 is called");
+	(*ptr);
+}
+void func2()
+{
+	printf("\nFunction2 is called");
 }
